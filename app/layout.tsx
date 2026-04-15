@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'Personal Coach — Planilhas de Treino',
+  title: 'Guto Fernandes — Endurance Coach',
   description: 'Planilhas de treino para corrida e triathlon no Training Peaks.',
 }
 
