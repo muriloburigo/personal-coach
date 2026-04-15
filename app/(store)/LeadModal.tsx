@@ -22,7 +22,8 @@ export default function LeadModal({ plan, onClose }: { plan: Plan; onClose: () =
       const data = await res.json()
       if (!res.ok) { setError(data.error ?? 'Erro ao processar'); return }
       if (data.url) {
-        window.location.href = data.url
+        window.open(data.url, '_blank', 'noopener,noreferrer')
+        onClose()
       } else {
         setError('Link do Training Peaks ainda não configurado. Tente novamente em breve.')
       }
@@ -75,7 +76,7 @@ export default function LeadModal({ plan, onClose }: { plan: Plan; onClose: () =
             disabled={loading}
             className="w-full py-3.5 bg-[#1E90FF] text-white font-semibold rounded-xl hover:bg-[#4A90D9] transition-all disabled:opacity-50 text-base"
           >
-            {loading ? 'Aguarde...' : 'Ir para o Training Peaks →'}
+            {loading ? 'Aguarde...' : '🛒 Comprar agora →'}
           </button>
         </form>
 
