@@ -6,7 +6,7 @@ import VideosSection from './VideosSection'
 import FaqSection from './FaqSection'
 import ComoFuncionaSection from './ComoFuncionaSection'
 
-export const revalidate = 60
+export const dynamic = 'force-dynamic'
 
 export default async function HomePage() {
   const db = createAdminClient()
